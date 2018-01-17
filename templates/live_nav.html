@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>直播导航</title>
+</head>
+<body>
+<div>
+    <h1>正在直播：</h1>
+    {% for live in live_urls %}
+        {{live.name}}： <a href="{{ live.url }}">{{ live.room_name }}</a> <br><br>
+    {% endfor %}
+</div>
+
+<hr>
+
+<div>
+    <h1>尚未开播：</h1>
+    {% for notlive in notlive_urls %}
+        {{notlive.name}}： <a href="{{ notlive.url }}">{{ notlive.room_name }}</a> <br><br>
+    {% endfor %}
+</div>
+</body>
+</html>
