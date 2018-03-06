@@ -19,7 +19,7 @@ def panda(json_html):
 
 
 def huya(html):
-    room_name = re.search('<h1\sclass="host-title"\sid="J_roomTitle">(.*?)</h1>', html, re.S).group(1)
+    room_name = re.search('<h1\sid="J_roomTitle">(.*?)</h1>', html, re.S).group(1)
     return room_name, '上次' not in html
 
 
