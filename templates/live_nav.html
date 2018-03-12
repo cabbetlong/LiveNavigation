@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>直播导航</title>
+    <script type="text/JavaScript">
+        // 刷新页面
+        function timeRefresh(timeoutPeriod) {
+            setTimeout("location.reload(true);", timeoutPeriod);
+        }
+    </script>
 </head>
-<body>
+<body onLoad="JavaScript:timeRefresh(300000);">
 <div>
     <h1>正在直播：</h1>
     {% for live in live_urls %}
